@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "shinyUI(\n  navbarPage(\"Fast\", id = \"nav_fast\", collapsable = TRUE,inverse = F,header = list(\n    br(),\n    \n    #tanbahabuman\n    \n    \n    \n    includeCSS(\"www/style.css\"),\n    tags$head(\n      tags$script(src = \"js/jquery-ui.custom.min.js\"),\n      tags$script(src = \"js/busy.js\"),\n      tags$script(src = 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',\n                  type = 'text/javascript')\n      #tags$style(type='text/css', '.well {background-color: rgB( 0, 132, 180);}')\n    )\n  ),\n  \n  tabPanel(\"Data\", uiOutput('data_ui_and_tabs')),\n  navbarMenu(\"Classify\",\n             tabPanel(\"K Nearest Neighbour\", uiOutput(\"knn\")),\n             tabPanel(\"Linear Disciminant Analysis\", uiOutput(\"lda\")),\n             tabPanel(\"Random Forest\", uiOutput(\"rf\"))),\n  \n  navbarMenu(\"Cluster\",\n             tabPanel(\"Hierarchical\", uiOutput(\"clusteringH\")),\n             tabPanel(\"Partitional\", uiOutput(\"clusteringP\"))),\n\n  navbarMenu(\"Forecast\",\n             tabPanel(\"ARIMA\", uiOutput(\"autoarima\")),\n             tabPanel(\"RELM time series\", uiOutput(\"relm_forecast\"))\n             ),\n  navbarMenu(\"Multivariate\",\n             tabPanel(\"Principal Component Analysis\", uiOutput(\"pca\")),\n             tabPanel(\"Factor Analysis\", uiOutput(\"factor\")),\n             tabPanel(\"Seemingly Unrelated Regression\", uiOutput(\"sureg\"))),\n  navbarMenu(\"Regression\",\n             tabPanel(\"Linear (OLS)\", uiOutput(\"regression\")),\n             tabPanel(\"Tobit Regression\", uiOutput(\"tobit_reg\")),\n             tabPanel(\"Ridge Regression\", uiOutput(\"ridge\")),\n             tabPanel(\" Geographically Weighted Ridge Regression\", uiOutput(\"GWRR\")),\n             tabPanel(\"Spatial Regression\",uiOutput(\"spatialreg\")),\n             tabPanel(\"Robust Ridge Regression\", uiOutput('robustridge')),\n             tabPanel(\"Robust Hurdle Poisson\", uiOutput('robusthp'))),\n  navbarMenu(\"Survival\",\n             tabPanel(\"Life Table\", uiOutput(\"survivalLT\")),\n             tabPanel(\"Kaplan Meier\", uiOutput(\"survivalKM\")),\n             tabPanel(\"Cox PH\", uiOutput(\"survivalCox\"))),\n  navbarMenu(\"Soft Computing\",\n             tabPanel(\"ANFIS\", uiOutput(\"anfis\")),\n             tabPanel(\"Fuzzy C-Means\", uiOutput(\"fuzzyCMeans\")),\n             tabPanel(\"FGWC-ABC\", uiOutput(\"abc\")),\n             tabPanel(\"FGWC-GSA\", uiOutput(\"fgwcGsa\")),\n\t           tabPanel(\"FGWC-PSO\", uiOutput(\"fgwcpso\")),\n             tabPanel(\"FTS-ACO\", uiOutput(\"ftsaco\")),\n             tabPanel(\"FCM-ABC\", uiOutput(\"fcmabc\")),\n             tabPanel(\"SVR-FPA\", uiOutput(\"IniFPASVR\"))\n             ),\n  navbarMenu(\"Association Rule\",\n             tabPanel(\"Apriori\", uiOutput(\"apriori\")),\n            tabPanel(\"FP-Growth\")\n            ),\n  navbarMenu(\"Biclustering\",\n             tabPanel(\"CC-Biclustering\", uiOutput(\"CCBiclustering\")),\n             tabPanel(\"Bimax-Biclustering\", uiOutput(\"BimaxBiclustering\"))\n  )\n  \n)\n)",
+    "created" : 1468636852197.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2322072565",
+    "id" : "8AD743AB",
+    "lastKnownWriteTime" : 1466523951,
+    "last_content_update" : 1466523951,
+    "path" : "E:/Coding/R/Fast54/fast54/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

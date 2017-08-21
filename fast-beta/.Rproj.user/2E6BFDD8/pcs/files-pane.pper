@@ -1,0 +1,9 @@
+{
+    "path" : "/srv/shiny-server/fast-beta/tools/analysis",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

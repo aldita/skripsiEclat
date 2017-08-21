@@ -1,0 +1,25 @@
+---
+title: "PLOTTING MAP"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  word_document
+  html_document
+  pdf_document
+---
+Hasil visualisasi variabel `r varMap()` terhadap peta `r nameMap()`
+
+```{r, echo = FALSE, fig.width = 6.5, fig.height = 4, dpi = 300}
+saveMap()
+```
+
+
+Hasil Summary dari variabel `r varMap()`
+```{r, echo = FALSE}
+sumVar()
+```
+
+
+Data Shapefile dari peta `r nameMap()`
+```{r, echo = FALSE}
+resultShapefile()
+```

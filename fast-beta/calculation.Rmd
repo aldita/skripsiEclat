@@ -1,0 +1,28 @@
+---
+title: "CLUSTERING using FGWC-PSO"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  word_document
+  html_document
+  pdf_document
+---
+Hasil visualisasi clustering menggunakan data `r getNameData()` terhadap peta `r nameMap1()`
+
+```{r, echo = FALSE, fig.width = 6.5, fig.height = 4, dpi = 300}
+saveMap1()
+```
+
+Hasil clustering berupa matriks keanggotaan dan data shapefile dari peta `r nameMap1()`
+```{r, echo = FALSE}
+resultClust()
+```
+
+Hasil centroid atau pusat cluster dari clustering
+```{r, echo = FALSE}
+resultClust1()
+```
+
+Hasil evaluation dalam indeks
+```{r, echo=FALSE}
+saveIndex()
+```

@@ -1,0 +1,90 @@
+##Forum Analisis Statistik
+###Regression Report
+###Tools: ANFIS
+***
+
+The Name of Model: 
+```{r, echo=FALSE}
+fsummary_modelname(doLearnFuzzy())
+```
+
+Model was Trained Using: 
+```{r, echo=FALSE}
+fsummary_modeltype(doLearnFuzzy())
+```
+
+The Names of Attributes:
+```{r, echo=FALSE}
+fsummary_variableattr(doLearnFuzzy())
+```
+
+The Interval of Training Data:
+```{r, echo=FALSE}
+fsummary_range_ori(doLearnFuzzy())
+```
+
+Type of Membership Functions: 
+```{r, echo=FALSE}
+fsummary_mffunction(doLearnFuzzy())
+```
+
+Type of T-norm Method:
+```{r, echo=FALSE}
+fsummary_tnormmethod(doLearnFuzzy())
+```
+
+Type of S-norm Method:
+```{r, echo=FALSE}
+fsummary_snormmethod(doLearnFuzzy())
+```
+
+Type of Implication Function: :
+```{r, echo=FALSE}
+fsummary_impfunc(doLearnFuzzy())
+```
+
+The Plot of Membership Function (normalized):
+```{r, echo=FALSE}
+plotMF(doLearnFuzzy())
+```
+
+The Parameter Values of Membership Function on the Input Variable (normalized) :
+```{r, echo=FALSE}
+fsummary_varinpmf(doLearnFuzzy())
+```
+
+The Fuzzy IF-THEN Rules:
+```{r, echo=FALSE}
+fsummary_ifthenrules(doLearnFuzzy())
+```
+
+The Linear Equations on Consequent Parts of Fuzzy IF-THEN Rules:
+```{r, echo=FALSE}
+fsummary_ifthenrulesconsequent(doLearnFuzzy())
+```
+
+Fitting and Predicting Plot:      
+```{r plot, echo=FALSE}
+getANFISfitPlotForSharing()
+getANFISpredPlotForSharing()
+```
+
+Error and Residuals:
+Fitting Phase
+```{r, echo=FALSE}
+getANFISResidualForSharingF()
+```
+Predicting Phase
+```{r, echo=FALSE}
+getANFISResidualForSharingP()
+```
+
+Predicted vs Real Value:
+Fitting Phase
+```{r, echo=FALSE}
+getANFISRealvsPredF()
+```
+Predicting Phase
+```{r, echo=FALSE}
+getANFISRealvsPredP()
+```

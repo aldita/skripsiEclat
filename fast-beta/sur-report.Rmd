@@ -1,0 +1,44 @@
+---
+title: "Multivariate using SUR"
+author: "FAST"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+  
+  
+Contemporaneous Correlation Test:
+```{r, echo=FALSE}
+getSuregCCT()
+```
+
+The Covariance Matrix of Residuals used for estimation:
+```{r, echo=FALSE}
+getSuregVarKovS(getSuregParBOLS())
+```
+
+The Covariance Matrix of Residuals of the estimation model:
+```{r, echo=FALSE}
+getSuregVarKovS(getSuregParBGLS())
+```
+
+The Correltion of Residuals of the estimation model:
+```{r, echo=FALSE}
+getSuregCorrEst()
+```
+
+Result for System:
+```{r, echo=FALSE}
+getSuregSysEst()
+```
+
+Result for Each Equation:
+```{r, echo=FALSE}
+getSuregResEach()
+```
+
+Model Estimation for Each Equation:
+Model formula:
+```{r, echo=FALSE}
+getSuregModCaption()
+getSuregModelEst()
+```

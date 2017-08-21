@@ -1,0 +1,34 @@
+---
+title: "APRIORI"
+author: "FAST"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+***
+
+Frequency Each Item:
+
+```{r, echo=FALSE}
+ chooseFreq()
+```
+
+Result of Apriori:
+
+```{r, echo=FALSE}
+ dataRules()
+```
+
+Plot Visualization:
+
+```{r, echo=FALSE}
+ itemFrequencyPlot(dataTrans(
+  ), topN=topNFreq())
+```
+
+```{r, echo=FALSE}
+ splot()
+ goplot()
+ gaplot()
+ pplot()
+```

@@ -1,0 +1,69 @@
+---
+title: "Forecasting Report"
+author: "Elan Lubihana"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+<h2><center><b> This Is Forecasting with Fuzzy Time Series And Ant Colony Optimization on FAST </b></center></h2>
+
+**General Information**
+```{r, results='asis', echo=FALSE}
+knitr::kable(DRFACOinfodataShareToForum())
+```
+
+<h3><center><b> RESULT </b></center></h3>
+
+**Error Model In Every Iteration :**
+```{r, results='asis', echo=FALSE}
+knitr::kable(DRFACOerror())
+```
+
+**Selected Model :**
+
+Iteration :
+```{r, echo=FALSE}
+DRFACOSelectedModel()[[1]]
+```
+
+
+<center>
+```{r plot, echo=FALSE}
+helpText(tags$h5(strong("MODELLING PLOT")))
+br()
+DRFACOplotmodel()
+br()
+br()
+helpText(tags$h5(strong("FITTING PLOT")))
+br()
+DRFACOplotfitting()
+br()
+br()
+helpText(tags$h5(strong("FORECASTING PLOT")))
+br()
+DRFACOplotForc()
+```
+</center><hr></hr>
+
+
+<h3><center><b> LAMPIRAN </b></center></h3>
+
+**Data Selected :**
+```{r, echo=FALSE, results='asis'}
+knitr::kable(DRFACOdataterpilih())
+```
+
+**Fitting Data :**
+```{r, echo=FALSE, results='asis'}
+knitr::kable(DRFACOdatafitting())
+```
+
+**Forecasting Data :**
+```{r, echo=FALSE, results='asis'}
+knitr::kable(DRFACOdataforecast())
+```
+
+
+For more information about this tools you can contact me by https://gmail.com (elubihana@gmail.com).
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.

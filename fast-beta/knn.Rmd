@@ -1,0 +1,5 @@
+# k-Nearest Neighbor
+  
+```{r, echo=FALSE}
+ knnprf()
+```

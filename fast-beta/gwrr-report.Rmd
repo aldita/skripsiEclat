@@ -1,0 +1,115 @@
+##Forum Analisis Statistik
+###Regression Report
+###Tools: Geographically Weighted Ridge Regression
+***
+
+
+
+
+
+
+Raw data:
+```{r kable, echo=FALSE}
+ library(knitr)
+ kable(hasilDataAwal()) 
+```
+
+
+
+
+
+
+Pemilihan Variabel:
+```{r, echo=FALSE}
+ hasilvarmetod()
+```
+
+Pengujian Autokorelasi dan Heterogenitas Spasial:
+```{r kable2, echo=FALSE}
+ library(knitr)
+ kable(hasilidentifikasi()) 
+```
+
+#### Pemodelan Geographically Weighted Regression
+
+```{r, echo=FALSE}
+ bwgwr()
+```
+
+GWR Coefficients :
+```{r kable3, echo=FALSE}
+ library(knitr)
+ kable(betagwr()) 
+```
+
+```{r, echo=FALSE}
+ r2rmsegwr()
+```
+
+
+#####Hypothesis Testing
+Goodness of Fits (GWR vs OLS)
+```{r, echo=FALSE}
+ gofgwr()
+```
+
+Simultan F test
+```{r, echo=FALSE}
+ simf()
+```
+
+Partial t test
+```{r kable4, echo=FALSE}
+ library(knitr)
+ kable(partialtest()) 
+```
+
+All Possible Models
+```{r kable5, echo=FALSE}
+ library(knitr)
+ kable(allposmod()) 
+```
+
+#### Identifikasi Multikolinieritas lokal dengan nilai VIF lokal
+
+```{r kable6, echo=FALSE}
+ library(knitr)
+ kable(hasilviflokal())
+ ketviflokal() 
+```
+
+#### Pemodelan Geographically Weighted Ridge Regression
+
+```{r, echo=FALSE}
+ bwgwrr()
+```
+
+GWRR Coefficients :
+```{r kable7, echo=FALSE}
+ library(knitr)
+ kable(betagwrr()) 
+```
+
+```{r, echo=FALSE}
+ r2rmsegwrr()
+```
+
+
+#####Hypothesis Testing
+
+Simultan F test
+```{r, echo=FALSE}
+ simfgwrr()
+```
+
+Partial t test
+```{r kable8, echo=FALSE}
+ library(knitr)
+ kable(partialtestgwrr()) 
+```
+
+All Possible Models
+```{r kable9, echo=FALSE}
+ library(knitr)
+ kable(allposmodgwrr()) 
+```

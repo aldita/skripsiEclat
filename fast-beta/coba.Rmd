@@ -1,0 +1,15 @@
+---
+title: "Association Rules Report"
+author: "FAST"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+Transaction Data:
+```{r, echo=FALSE}
+library(knitr)
+library(arules)
+data("Adult")
+tl <- as(Adult, "dataframe")
+kable(inspect(tl))
+```

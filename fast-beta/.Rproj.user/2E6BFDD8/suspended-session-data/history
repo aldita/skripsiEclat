@@ -1,0 +1,512 @@
+fcast
+data_series
+train
+tes
+library(forecast)
+fcast
+tes
+accuracy(fcast, tes)
+fit2
+str(fcast)
+fcast$mean
+fcast
+plot(fcast$mean)
+lines(tes, col = 2)
+plot(fcast$upper)
+plot(forecast)
+plot(fcast)
+plot.forecast(fcast, include = 10)
+plot.forecast(fcast, include = 12)
+plot.forecast(fcast, include = 6)
+plot.forecast(fcast, include = 0)
+lines(tes, col =2)
+data.frame(data, k = fit$residuals)
+data.frame(data, k = fit2$residuals)
+seq(0,1, length.out = 11)
+date <- seq(as.Date("2000/01/1"),
+as.Date(paste("2013/",05 + input$df,"/1", sep = "")),
+by = "1 months")
+date <- seq(as.Date("2000/01/1"),
+as.Date(paste("2013/",05 + 0,"/1", sep = "")),
+by = "1 months")
+date
+date <- seq(as.Date("2000/01/1"),
+as.Date(paste("2013/",05 + 1,"/1", sep = "")),
+by = "1 months")
+date
+data <- data.frame(Value = data,
+Date = date)
+date <- seq(as.Date("2009/01/1"),
+as.Date(paste("2014/",05 + 1,"/1", sep = "")),
+by = "1 months")
+date
+data <- data.frame(Value = data,
+Date = date)
+data
+runApp("fast", launch.browser = TRUE)
+val
+runApp("fast", launch.browser = TRUE)
+runApp("fast", launch.browser = TRUE)
+runApp("fast", launch.browser = TRUE)
+data
+data_series
+train
+tes
+print(tes, digits = 4)
+print(tes, digits = 10)
+print(data_series, digits = 10)
+runApp("fast", launch.browser = TRUE)
+fcast2
+fit2
+fcast
+print(fcast, digits = 2)
+forecast$fitted
+fcast$fitted
+fcast
+fit
+fit2
+fcast2 <- forecast(fit2)
+fcast2
+print(fcast$mean)
+print(fcast$mean, digits = 4)
+print(fcast$mean, digits = 100)
+print(fcast$mean, digits = 10)
+print(fcast$mean, digits = 20)
+print(fcast$mean, digits = 5)
+print(fcast$mean, digits = 10)
+str(fcast$mean)
+runApp("fast", launch.browser = TRUE)
+data <- read.csv(file.choose(), header = T)
+data <- read.csv(file.choose(), header = T)
+data_series <- ts(data, frequency = 12, start = c(2000,1))
+data_series
+library(forecast)
+fit_total <- auto.arima(data_series)
+train <- window(data_series, end = c(2013,12))
+train
+test <- windows(data_series, start = c(2014))
+test <- windows(data_series, start = c(2014,1))
+test <- window(data_series, start = c(2014,1))
+test
+fit_train <- auto.arima(train)
+fcast_train <- forecast(fit_train)
+fcast_train <- forecast(fit_train, h = 7)
+fcast_total <- forecast.Arima(fit_total)
+fcast_total
+fcast_train
+accuracy(fcast_train, test)
+test
+fcast_train <- auto.arima(train, stepwise = F)
+fcast_train <- forecast(fcast_train, h = 7)
+fcast_train
+accuracy(fcast_train, test)
+fcast_train
+fit_train <- auto.arima(train, stepwise = F)
+fcast_train <- forecast(fit_train, h = 7)
+fcast_train
+fit_train
+fit_train <- auto.arima(train)
+fit_train
+fit_train <- auto.arima(train, stepwise = FALSE)
+fit_train
+accuracy(fcast_train, test)
+fcast_train
+plot(fcast_train)
+plot(fcast_train, include = 0)
+lines(test, col=2)
+test
+fcast_total
+fit_train
+fit_total
+a <- Arima(train, order = c(0,1,1) , seasonal = c(0,0,1))
+a
+a <- Arima(train, order = c(0,1,1) , seasonal = c(0,0,1), include.drift = T)
+a
+fit_tota
+fit_total
+fcast(fit_total, h = 7)
+forecast(fit_total, h = 7)
+forecast(fit_total, h = -7)
+summary(fit_total)
+plot(fit_total$x)
+plot(fit_total, col = 2)
+plot(fit_total)
+plot(data_series, col = 2)
+lines(fit_total)
+lines(fit_total$x)
+plot(data_series, col = 2)
+lines(fitted.Arima(fit_total), col = blue)
+lines(fitted.Arima(fit_total), col = "blue")
+val[["mod"]] <- satu
+val[["mod"]] <- "satu"
+values
+values <- reactiveValues()
+val[["mod"]] <- satu
+val[["mod"]] <- "satu"
+values[["mod"]] <- "satu"
+values[["mod"]] <- "2"
+values
+values[["mod"]] <- c("satu")
+values
+str(values)
+runApp("fast", launch.browser = TRUE)
+runApp("fast", launch.browser = TRUE)
+train
+fit_total
+str(fit_total)
+g <- c(1,2,3)
+g[1]
+g[2]
+daftar <- c(fit)
+daftar <- c(fit_total)
+daftar
+daftar <- data.frame(fit_total)
+daftar[[1]] <- fit_total
+daftar[[2]] <- fit_train
+daftar[[1]]
+daftar
+daftar[[1]]
+daftar[[2]]
+daftar[[]]
+daftar
+l <- list
+l[[1]] <- c(1,2,3)
+l <- list()
+l[[1]] <- c(1,2,3)
+l[[2]] <- c(4,5,6)
+l
+l[[1]]
+daftar
+daftar[[1]]
+daftar[[1]]$aic
+str(daftar[[1]])
+d = "aic"
+daftar[[1]]$d
+daftar[[1]]$aic
+attr(daftar[[1]], d)
+attr(daftar[[1]])
+attr(daftar[[1]], "aic")
+daftar[[1]]$aicc
+d
+daftar[[1]]$aic
+daftar[[1]]$aic
+daftar[[1]][,d]
+daftar[[1]][d,]
+daftar[[1]][,]
+daftar[[1]][]
+daftar[[1]]
+class(daftar[[1]])
+daftar[[1]][1]
+daftar[[1]][6]
+daftar[[1]][d]
+daftar[[1]][d]
+d = "aicc"
+daftar[[1]][d]
+daftar[[1]][d]
+a <- "aic"
+daftar[[1]][d] < daftar[[1]][a]
+a
+daftar[[1]][a]
+daftar[[1]]$aic
+daftar[[1]][a,]
+daftar[[1]][,a]
+daftar[[1]][a][1]
+daftar[[1]][a][1,]
+daftar[[1]][a][,1]
+daftar[[1]][a]
+class(daftar[[1]][a])
+class(daftar[[1]][a][1])
+daftar[[1]][a][1]
+as.numeric(daftar[[1]][a])
+t <- data.frame()
+length(t)
+summary(daftar[[1]])
+summary(daftar[[1]])[1]
+sum <-summary(daftar[[1]])
+sum <- summary(daftar[[1]])
+str(sum)
+sum[1]
+sum["ME"]
+sum$ME
+sum[1]
+sum[1]
+library(shinyBS)
+bsDemo
+bsDemo()
+bsDemo(launch.browser = T)
+runApp("Aplikasi2")
+runApp("Aplikasi2", launch.browser = TRUE)
+runApp("Aplikasi1")
+runApp("Aplikasi")
+runApp("census-app", launch.browser = T)
+runApp("census-app", launch.browser = T)
+bsDemo(launch.browser = T)
+devtools::install_github("shiny-incubator", "rstudio")
+library(shinyIncubator)
+shinyIncubator::Progress()
+runApp("progress", launch.browser = T)
+runApp("Aplikasi", launch.browser = T)
+runApp("Aplikasi1", launch.browser = T)
+runApp("Aplikasi2", launch.browser = T)
+runApp("fast1308", launch.browser = T)
+runApp("fast1308", launch.browser = T)
+runApp("fast1308", launch.browser = T)
+runApp("fast1308", launch.browser = T)
+runApp("fast1308", launch.browser = T)
+runApp("fast1308", launch.browser = T)
+data[[1]]
+data_series
+train
+fit
+sum <- summary(fit_total)
+sum[1]
+dat <- read.csv(file.choose(), header = T)
+save(dat, file =("fast/IHK_TahunDasar2012.rda") )
+dat
+save(dat, file =("fast/IHK_TahunDasar2012.rda") )
+d <- load("fast/IHK_TahunDasar2012.rda")
+d
+d <- get(d)
+d
+data
+dat
+dat_series <- ts(dat, frequency = 12, start = c(2000,1))
+dat_series
+train <- window(dat_series, end = c(2013,12))
+train
+test <- window(dat_series, start = c(2014,1))
+test
+train
+auto.arima(train)
+fit_train <- auto.arima(train)
+fcast_train <- forecast(fit_train, h = 7)
+plot(fcast_train)
+plot(fcast_train, include = 0)
+lines(test, col = 2)
+plot(fcast_train, include = 0)
+lines(test, col = "red")
+ar <- Arima(train, order = c(0,1,1), seasonal = c(0,0,1), include.drift = TRUE)
+ar
+fit_train
+ar
+fcast_ar <- forecast(ar, h = 7)
+plot(fcast_ar, include = 0)
+lines(test, col = 2)
+lines(test, col = 2)
+lines(test, col = 3)
+lines(test, col = 3)
+lines(test, col = 3)
+lines(test, col = 2)
+lines(test, col = 4)
+acc <- accuracy(fcast_train, test)
+acc
+fcast_train
+trest
+test
+acc
+str(acc)
+acc[1]
+acc[2][1]
+acc[2][2]
+acc
+acc[1]
+acc[2]
+acc[4]
+acc[[1]]
+acc[[2]]
+class(acc)
+ac
+acc
+acc[2,1]
+acc_test <- acc[2,]
+class(acc_test)
+acc_test
+acc_test[1]
+acc_test[2]
+acc_test[3]
+fcast_train
+str(fcast_train)
+library(shinyBS)
+bdDemo
+bdDemo()
+bsDemo(launch.browser = T)
+bsDemo(launch.browser = T)
+runApp("fast", launch.browser = T)
+runApp("fast", launch.browser = T)
+runApp("fast", launch.browser = T)
+runApp("fast", launch.browser = T)
+runApp("fast", launch.browser = T)
+Q
+runApp("fast", launch.browser = T)
+library(shinyBS)
+bsDemo()
+bsDemo(launch.browser = T)
+runApp("clientserver")
+runApp("clientserver", launch.browser = T)
+runApp("clientserver", launch.browser = T)
+runGitHub("rShinyApps","brianbolt",subdir="getParameters.shiny")
+runApp("clientserver", launch.browser = T)
+runApp("clientserver", launch.browser = T, port = 8100)
+runApp("fast", launch.browser = T, port = 8100)
+setwd("~R/shiny")
+setwd("~R/shiny/")
+setwd("~/R/shiny/")
+runApp("fast", launch.browser = T, port = 8100)
+setwd("~/R/shiny/")
+runApp("fast", launch.browser = T, port = 5623)
+setwd("~/R/shiny/")
+runApp("fast", launch.browser = T, port = 5623)
+runApp("fast", launch.browser = T, port = 5623)
+runApp("fast", launch.browser = T, port = 5623)
+rnorm(1)
+rnorm(2)
+rnorm(1)
+rnorm(1000)
+rnorm(1)
+unorm(1)
+runif(1)
+unorm(1)
+rnorm(1)
+rnorm(1)
+rnorm(1)
+LETTERS
+letters
+runApp("fast", launch.browser = T, port = 5623)
+runApp("fast", launch.browser = T, port = 5623)
+runApp("fast", launch.browser = T, port = 5623)
+shiny::runApp()
+shiny::runApp()
+install.packages("RColorBrewer")
+runApp()
+detach("package:wordcloud", unload=TRUE)
+library("wordcloud", lib.loc="/usr/lib64/R/library")
+remove.packages("wordcloud")
+runApp()
+runApp()
+shiny::runApp()
+install.packages("wordcloud")
+runApp()
+shiny::runApp()
+install.packages("wordcloud")
+runApp()
+runApp()
+install.packages("wordcloud", dependencies = FALSE)
+install.packages("wordcloud", dependencies = 1)
+install.packages("wordcloud", dependencies = T)
+library("wordcloud", lib.loc="/usr/lib64/R/library")
+runApp()
+remove.packages("wordcloud")
+install.packages("wordcloud")
+install.packages("wordcloud",dependencies=TRUE)
+install.packages("wordcloud")
+install.packages("wordcloud")
+runApp()
+install.packages("wordcloud")
+runApp()
+install.packages("wordcloud")
+runApp()
+library("wordcloud", lib.loc="/usr/lib64/R/library")
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+install.packages("WriteXLS")
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+install.packages("Matrix")
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()

@@ -1,0 +1,31 @@
+##Forum Analisis Statistik
+###Clustering Report
+###Tools: Fuzzy C-Means
+***
+
+Raw data before clustering:
+```{r, echo=FALSE}
+ hasilDataAwal()
+```
+
+Clustering result:
+```{r, echo=FALSE}
+ hasilCluster()
+```
+
+Cluster visualization:     
+```{r plot, echo=FALSE}
+ plotCM1()
+ plotCM2()
+ plotCM3()
+```
+
+The partition matrix:
+```{r, echo=FALSE}
+ hasilMatriksPartisi()
+```
+
+The center of clusters:
+```{r, echo=FALSE}
+ hasilPusatCluster()
+```

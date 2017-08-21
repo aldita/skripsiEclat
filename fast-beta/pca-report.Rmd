@@ -1,0 +1,11 @@
+##Forum Analisis Statistik
+###PCA Report
+###Tools: Principal Component Analysis
+***
+
+
+PCA result:
+```{r, echo=FALSE}
+ hasilPCA()
+```
+

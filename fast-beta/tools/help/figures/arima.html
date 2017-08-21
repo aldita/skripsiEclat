@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Contoh 1: Indeks Harga Konsumen</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<!-- rmarkdown v1 -->
+
+<p>Halaman help ini membantu anda untuk menggunakan Fast statistical software untuk melakukan beberapa analisis ARIMA</p>
+
+<p>Semua file contoh dapat di load melalui Data &gt; Manage. Klik radio buttton &#39;examples&#39; dan tekan &#39;Load examples&#39;.</p>
+
+<h3>Contoh 1: Indeks Harga Konsumen</h3>
+
+<p>Kita akan melakukan analisis menggunakan data Indeks Harga Konsumen Indonesia yang bersumber dari <a href="http://www.bps.go.id">www.bps.go.id</a></p>
+
+<h4>Indeks Harga Konsumen Indonesia</h4>
+
+<h5>Deskripsi :</h5>
+
+<p><b> Indeks Harga konsumen (IHK): </b><br/>
+Ialah suatu indeks, yang menghitung rata-rata perubahan harga dalam suatu periode, dari suatu kumpulan barang dan jasa yang dikonsumsi oleh penduduk/rumah tangga dalam kurun waktu tertentu. </p>
+
+<h5>Variabel :</h5>
+
+<ul>
+<li>IHK  = Indeks Harga Konsumen Indonesia bulan Januari 2000 s/d Juli 2014</li>
+</ul>
+
+<h5>Catatan :</h5>
+
+<ul>
+<li>Tahun dasar yang digunakan adalah tahun dasar 2012, IHK dihitung berdasarkan pola konsumsi hasil SBH di 82 kota tahun 2012 (2012 = 100)</li>
+</ul>
+
+<h4>Stasioneritas dan Differencing</h4>
+
+<p>Identifikasi model ARIMA dari data IHK akan dapat dilakukan jika data telah menunjukkan pola yang stasioner. 
+Tahap awal dari identifikasi ini dilakukan melalui time series plot seperti pada grafik dibawah.</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_seriesplot.png" alt="ARIMA - series plots"/><br/>
+Gambar 1. Series plot data IHK</p>
+
+<p>Berdasarkan time series plot tersebut dilihat bahwa data IHK belum menunjukkan pola yang stasioner dalam hal rata-rata. 
+Untuk mendukung deteksi grafik, kita dapat melakukan uji unit root dengan pada tab Identification &gt; Unit Root Test. 
+Di halaman ini tersedia tiga jenis uji Unit Root test, yaitu Uji ADF (Augmented Dickey-Fuller), KPSS (Kwiatkowski-Phillips-Schmidt-Shin), dan PP (Phillips-Perron)</p>
+
+<p>Hipotesis nol dan hipotesis alternatif dari uji ADF dan PP adalah sebagai berikut:</p>
+
+<ul>
+<li>H0:Data tidak stasioner (mengandung unit root).</li>
+<li>H1:Data stasioner (tidak mengandung unit root.</li>
+</ul>
+
+<p>sedangkan untuk uji KPSS hipotesisnya berkebalikan dari kedua uji diatas, yaitu: </p>
+
+<ul>
+<li>H0:Data stasioner (tidak mengandung unit root.</li>
+<li>H1:Data tidak stasioner (mengandung unit root).</li>
+</ul>
+
+<p>tampilan dari tab Identification &gt; Unit Root Test untuk data IHK adalah sebagai berikut:</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_uroot.png" alt="ARIMA - series plots"/><br/>
+Gambar 2. Uji unit root data IHK</p>
+
+<p>Untuk itu perlu dilakukan proses differencing agar data menjadi stasioner dalam rata-rata, pertama kali dilakukan proses differencing orde pertama lalu dilakukan analisis ulang pada data.
+Differencing dilakukan dengan menceklis tombol &#39;Apply Differencing?&#39;, dan memilih untuk differencing orde pertama atau orde kedua</p>
+
+<p>Gambar dibawah menunjukkan time series plot data IHK setelah dilakukan differencing orde pertama. Terlihat bahwa data tidak menunjukkan pola tren lagi namun hal ini perlu didukung dengan melakukan uji unit root lagi. </p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_diffseriesplot.png" alt="ARIMA - series plots"/><br/>
+Gambar 3. Series plot data IHK difference orde pertama</p>
+
+<p>Terlihat bahwa data tidak menunjukkan pola tren lagi namun hal ini perlu didukung dengan melakukan uji unit root lagi.
+Hasil uji unit root setelah proses differencing orde pertama adalah sebagai berikut:</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_uroot1.png" alt="ARIMA - unit root"/><br/>
+Gambar 4. Uji unit root data IHK difference orde pertama</p>
+
+<p>Hasil uji unit root pada gambar diatas menunjukkan bahwa data telah stasioner maka identifikasi model sudah dapat dilakukan.</p>
+
+<h4>Identifikasi model</h4>
+
+<p>Tahap selanjutnya adalah mengidentifikasi model ARIMA untuk data IHK. Identifikasi model dilakukan dengan melihat pola dari plot ACF dan PACF
+Untuk melihat plot ACF tekan tab Identification &gt; ACF. berikut tampilan plot ACF untuk data IHK setelah data IHK differencing orde pertama:</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_acfplot.png" alt="ARIMA - acfplot"/>
+Gambar 5. Plot ACF data IHK difference orde pertama</p>
+
+<p>pengguna dapat mengganti jumlah lag yang ditampilkan dengan mengubah nilai pada kota &#39;Lags to include&#39;.pada gambar diatas ditampilkan plot ACF untuk 100 lag.
+sedangkan untuk plot PACF dapat dilihat pada tab Identification &gt; PACF.</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_pacfplot.png" alt="ARIMA - pacfplot"/>
+Gambar 6. Plot PACF data IHK difference orde pertama</p>
+
+<p>Berdasarkan plot ACF (gambar 5) dan plot PACF (grafik 6) terlihat data menunjukkan pola yang stasioner pada lag non musiman (seirama dengan hasil uji unit root) dan lag musiman juga menunjukkan pola yang turun dengan cepat. Sementara itu, plot ACF pada lag 1 (non musiman) dan lag 12 (musiman) keluar batas dan plot PACF pada lag 1 (non musiman) juga keluar batas. Oleh karena itu, dugaan model ARIMA sementara adalah ARIMA (1,1,1)(0,0,1)12
+Selanjutnya hasil identifikasi manual ini dibandingkan dengan hasil identifikasi oleh aplikasi.</p>
+
+<h4>Estimasi Model</h4>
+
+<p>Estimasi model dilakukan pada tab ARIMA &gt; Estimation. pada halaman ini akan ditampilkan detail dari model yang di estimasi
+berikut output :</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_estimation.png" alt="ARIMA - estimation"/>
+Gambar 7. Output halaman estimasi model ARIMA</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_estimationdetail.png" alt="ARIMA - estimation"/>
+Gambar 8. Sidebar estimasi model ARIMA</p>
+
+<p>pada sidebar terdapat beberapa pilihan:</p>
+
+<ul>
+<li>Pilihan menentukan model secara otomatis atau memasukkan orde dari model secara manual, terdapat pada dropdown list &#39;Modelling method&#39;</li>
+<li>Pilihan kriteria model terbaik, terdapat pada dropdown list &#39;Information criteria&#39;</li>
+<li>Pilihan uji unit root untuk mencari orde differencing, terdapat pada dropdown list &#39;Unit root test&#39;</li>
+<li>Pilihan uji seasonal test untuk mencari orde musiman, terdapat pada dropdowon list &#39;Seasonal test&#39;</li>
+<li>Pilihan untuk memakai seasonal model atau tidak, pada checkbox &#39;seasonal model&#39;</li>
+<li>Pilihan untuk memakai algoritma stepwise atau tidak dalam pencarian model, terdapat pada checkbox &#39;Use stepwise selection&#39;.
+pencarian model tanpa memakai algoritma stepwise akan memakan waktu yang lebih lama, terutama untuk model ARIMA musiman (SARIMA).</li>
+<li>Pilihan untuk memasukkan parameter drift/konstan pada model, terdapat pada checkbox &#39;Allow drift in models&#39;<br/></li>
+</ul>
+
+<p>pengguna juga dapat memilih orde dari model secara manual, yaitu dengan memilih pilhan &#39;Modelling method&#39; manual selection</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_estimationmanual.png" alt="ARIMA - estimation"/>
+Gambar 9. Penentuan model ARIMA manual</p>
+
+<p>model yang telah dipilih pengguna dapat ditambahkan sebagai bahan perbandingan untuk memilih model terbaik denga menekan tombol &#39;Add this model for comparison&#39;.
+model yang ditambahkan akan tampil pada tabel yang terletak dibawah. tabel ini berisi model-model yang nantiya dapat akan dipilih menjadi kandidat model terbaik.
+tabel berikut menampilkan model pilihan model terbaik untuk data IHK.</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_estimationtable.png" alt="ARIMA - estimation"/>
+Gambar 10. Tabel daftar model terbaik</p>
+
+<p>kemudian pada dropdown list &#39;best model criteria&#39;, pengguna dapat memilih kriteria pemelihan model terbaik berdasarkan apa. 
+setelah pengguna sudah menambahkan semua kemungkinaan model terbaik maka selanjutnya adalah melakukan uji diagnostik</p>
+
+<h4>Uji diagnostik</h4>
+
+<p>Uji diagnostik terdapat pada tab ARIMA &gt; Diagnostic, pada halaman ini akan ditampilkan dua uji untuk menentukan apakah model terbaik sudah memenuhi asumsi.
+berikut outputnya untuk data IHK.</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_diagnostic.png" alt="ARIMA - diagnostic"/>
+Gambar 11. Output halaman uji diagnostik</p>
+
+<p>pada halaman ini terdapat pilihan untuk melakukan uji Ljung-Box atau Box-Pierce terhadap residual dari model.
+dalam hal ini untuk data IHK model terbaik adalah ARIMA(0,1,1)(1,0,0)[12] with drift. Pada halaman ini aplikasi akan menampilkan kesimpulan apakah data telah white noise atau tidak secara otomatis.
+terlihat bahwa model terbaik telah memenuhi asumsi white noise.</p>
+
+<h4>Peramalan</h4>
+
+<p>Pilih tab ARIMA &gt; Forecast.
+Setelah model terbaik lolos uji diagnostik, maka tahap selanjutnya adalah melakukan peramalan. 
+tampilan peramalan untuk 6 bulan kedepan dari model ARIMA(0,1,1)(1,0,0)[12] adalah sebagai berikut:</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_forecast.png" alt="ARIMA - forecast"/>
+Gambar 12. Output peramalan IHK 6 bulan kedepan</p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_fitted.png" alt="ARIMA - forecast"/>
+Gambar 12. Fittted plot </p>
+
+<p><img src="C:/Users/Asus/Documents/R/shiny/fast/tools/help/figures/arima_outsample.png" alt="ARIMA - forecast"/>
+Gambar 13. Output Out-of sample forecast</p>
+
+<p>Itulah langkah-langkah penggunaan aplikasi ini untuk meramal beserta praktekny pada data IHK semoga bermanfaat
+<br/>&copy; Debi Tomika (2014) </p>
+
+</body>
+
+</html>
+

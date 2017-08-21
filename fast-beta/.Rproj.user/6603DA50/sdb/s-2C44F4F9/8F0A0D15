@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1502191036759.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8F0A0D15",
+    "lastKnownWriteTime" : 19703385811189792,
+    "last_content_update" : 1502191036759,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "FF27812E",
+        "caption" : "Groceries_dataset",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Groceries_dataset&cache_key=FF27812E",
+        "displayedObservations" : 38765,
+        "environment" : "",
+        "object" : "Groceries_dataset",
+        "preview" : 0,
+        "totalObservations" : 38765,
+        "variables" : 3
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

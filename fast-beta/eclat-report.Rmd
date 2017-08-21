@@ -1,0 +1,35 @@
+---
+title: "Association Rules Report"
+author: "FAST"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+Transaction Data:
+```{r, echo=FALSE}
+library(knitr)
+kable(outDataTrans())
+```
+
+Vertical Transaction Data:
+```{r, echo=FALSE}
+ inspect(transver())
+```
+
+Frequent Itemsets:
+```{r, echo=FALSE}
+ frequent()
+```
+
+Rules:     
+```{r plot, echo=FALSE}
+ dataRules()
+```
+
+Plot:
+```{r, echo=FALSE}
+ fplot()
+ splot()
+ goplot()
+ gaplot()
+```

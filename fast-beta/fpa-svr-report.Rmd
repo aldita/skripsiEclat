@@ -1,0 +1,81 @@
+---
+title: "FPA-SVR Report **"
+params:
+  C: NA
+  ModelFit: NA
+  eps: NA
+  gamma: NA
+  lag: NA
+  mydataFrame: NA
+  sv: NA
+  var: NA
+output:
+  html_document:
+    theme: "flatly"
+    css: custom.css
+---
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+This is a report of forecasting using FPA-SVR method.
+
+
+####1. Model Evaluation Result
+
+Name           | Value
+---------------|---------------
+Variable       | <b>`r params$var`</b>
+Method         | FPA-SVR
+Kernel         | Radial
+Lag            | `r params$lag`
+Included Obs. (train)  | `r length(params$ModelFit$fitted)`
+Number of SV   | `r params$sv`
+| | |
+<b>SVR paramseter</b> | |
+C              | <b>`r params$C`</b>
+gamma          | <b>`r params$gamma`</b>
+eps            | <b>`r params$eps`</b>
+| | |
+<b>Accuracy Measure (Training set)</b> | |
+Mean Absolute Scaled Error (MASE) | `r params$ModelFit$maseTrain`
+Mean Absolute Percentage Error(MAPE) | `r params$ModelFit$mapeTrain`
+Root Mean Squared Error (RMSE) | `r params$ModelFit$RMSETrain`
+| | |
+<b>Accuracy Measure (Test set)</b> | |
+Mean Absolute Scaled Error (MASE) | `r params$ModelFit$maseTest`
+Mean Absolute Percentage Error(MAPE) | `r params$ModelFit$mapeTest`
+Root Mean Squared Error (RMSE) | `r params$ModelFit$RMSETest`
+
+\pagebreak
+<br>
+<br>
+
+
+####2. Forecasting plot
+```{r, echo=F,fig.width=6}
+ require(dygraphs)
+ dygraph(params$mydataFrame)  %>%
+        dySeries("trainingSet", color = "black") %>%
+        dySeries("testSet", color = "grey") %>%
+        dySeries("fitted", color = "blue") %>%
+        dySeries("prediction", color = "red") 
+```
+
+<br></br>
+
+####3. Forecasting value
+```{r, echo=F}
+  # params$mydataFrame 
+  df <- sapply(params$mydataFrame, as.character)
+  df[is.na(df)] <- " "
+  
+  knitr::kable(as.data.frame(df),row.names = T)
+```

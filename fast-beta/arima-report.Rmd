@@ -1,0 +1,10 @@
+Here is the forecast plot:
+  
+```{r plot, echo=FALSE}
+ plotperamalan()
+```
+
+Here is the forecast value :
+```{r, echo=FALSE}
+ nilaiperamalan()
+```

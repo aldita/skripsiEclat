@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "shinyUI(\n  navbarPage(\"Fast\", id = \"nav_fast\", collapsable = TRUE,inverse = F,header = list(\n    br(),\n    includeCSS(\"www/style.css\"),\n    tags$head(\n      tags$style(HTML(\"#explanationBox {\n        overflow-y: auto;\n        }\n        #tableDataPred {\n        overflow: scroll;\n        height : 500px;\n        }\n        table.data {\n          width : 100%\n        }\n        \"\n      ) # close HTML\n      )            # close tags$style\n    ),\n    tags$head(\n      tags$script(src = \"js/jquery-ui.custom.min.js\"),\n      tags$script(src = \"js/busy.js\"),\n      tags$script(src = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML',\n                  type = 'text/javascript')\n      #tags$style(type='text/css', '.well {background-color: rgB( 0, 132, 180);}')\n    )\n  ),\n  \n  tabPanel(\"Data\", uiOutput('data_ui_and_tabs')),\n  \n  navbarMenu(\"Classify\",\n             tabPanel(\"K Nearest Neighbour\", uiOutput(\"knn\")),\n             tabPanel(\"Linear Disciminant Analysis\", uiOutput(\"lda\")),\n             tabPanel(\"Random Forest\", uiOutput(\"rf\"))),\n  \n  navbarMenu(\"Cluster\",\n             tabPanel(\"Hierarchical\", uiOutput(\"clusteringH\")),\n             tabPanel(\"Partitional\", uiOutput(\"clusteringP\")),\n             tabPanel(\"Spatial Clustering (FGWC-GSA)\", uiOutput(\"fgwcGsa\"))\n             ),\n\n  navbarMenu(\"Forecast\",\n             tabPanel(\"FPA-SVR\",uiOutput(\"FPASVR\")),\n             tabPanel(\"ARIMA\", uiOutput(\"autoarima\")),\n             tabPanel(\"RELM time series\", uiOutput(\"relm_forecast\")),\n             tabPanel(\"FFNN-Quasi Newton\", uiOutput(\"ffnn_quasi\")),\n             tabPanel(\"FTS-ACO\", uiOutput(\"ftsaco\"))\n             ),\n\n  navbarMenu(\"Multivariate\",\n             tabPanel(\"Principal Component Analysis\", uiOutput(\"pca\")),\n             tabPanel(\"Factor Analysis\", uiOutput(\"factor\")),\n             tabPanel(\"Seemingly Unrelated Regression\", uiOutput(\"sureg\"))\n             ),\n  \n  navbarMenu(\"Regression\",\n             tabPanel(\"Linear (OLS)\", uiOutput(\"regression\")),\n             tabPanel(\"Tobit Regression\", uiOutput(\"tobit_reg\")),\n             tabPanel(\"Ridge Regression\", uiOutput(\"ridge\")),\n             tabPanel(\" Geographically Weighted Ridge Regression\", uiOutput(\"GWRR\")),\n             tabPanel(\"Spatial Regression\",uiOutput(\"spatialreg\")),\n             tabPanel(\"Ridge Robust Regression\", uiOutput(\"robust_ridge\")),\n             tabPanel(\"Robust Hurdle Poisson\", uiOutput('robusthp'))\n             ),\n        \n  navbarMenu(\"Survival\",\n             tabPanel(\"Life Table\", uiOutput(\"survivalLT\")),\n             tabPanel(\"Kaplan Meier\", uiOutput(\"survivalKM\")),\n             tabPanel(\"Cox PH\", uiOutput(\"survivalCox\"))),\n  \n  navbarMenu(\"Soft Computing\",\n             tabPanel(\"ANFIS\", uiOutput(\"anfis\")),\n             tabPanel(\"Neufo Fuzzy-GMDH\",uiOutput(\"NFGMDH\")),\n             tabPanel(\"Fuzzy C-Means\", uiOutput(\"fuzzyCMeans\")),\n             tabPanel(\"FCM-ABC\", uiOutput(\"fcmabc\")),\n             tabPanel(\"FGWC-ABC\", uiOutput(\"abc\")),\n\t           tabPanel(\"FGWC-PSO\", uiOutput(\"fgwcpso\"))\n             ),\n    navbarMenu(\"Association Rule\",\n             tabPanel(\"Apriori\", uiOutput(\"apriori\")),\n             tabPanel(\"Eclat\", uiOutput(\"eclat\"))\n            #tabPanel(\"FP-Growth\")\n            ),\n    navbarMenu(\"BiClustering\",\n            tabPanel(\"Cheng Church's BiClustering\",uiOutput(\"CCBiclustering\"))\n    )\n\n )\n)",
+    "created" : 1497164996607.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "645639990",
+    "id" : "214F5C19",
+    "lastKnownWriteTime" : 1499228526,
+    "last_content_update" : 1499228526065,
+    "path" : "~/Skripsi/2/fast-beta/fast-beta/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

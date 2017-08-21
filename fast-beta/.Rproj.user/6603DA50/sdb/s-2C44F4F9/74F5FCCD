@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Association Rules Report\"\nauthor: \"FAST\"\ndate: \"`r format(Sys.time(), '%d %B, %Y')`\"\noutput: html_document\n---\n\nTransaction Data:\n```{r, echo=FALSE}\nlibrary(knitr)\nkable(outDataTrans())\n```\n\nVertical Transaction Data:\n```{r, echo=FALSE}\n inspect(transver())\n```\n\nFrequent Itemsets:\n```{r, echo=FALSE}\n frequent()\n```\n\nRules:     \n```{r plot, echo=FALSE}\n dataRules()\n```\n\nPlot:\n```{r, echo=FALSE}\n fplot()\n splot()\n goplot()\n gaplot()\n```",
+    "created" : 1503297162382.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1385542861",
+    "id" : "74F5FCCD",
+    "lastKnownWriteTime" : 1503297173,
+    "last_content_update" : 1503297173258,
+    "path" : "~/Skripsi/2/fast-beta/fast-beta/eclat-report.Rmd",
+    "project_path" : "eclat-report.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

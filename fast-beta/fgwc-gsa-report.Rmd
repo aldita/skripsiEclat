@@ -1,0 +1,36 @@
+---
+title: "CLUSTERING using FGWC-GSA"
+author: "FAST"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+
+Raw data yang dianalisis:
+```{r, echo=FALSE}
+ rawDataFgwcGsa()
+```
+
+Summary Data:
+```{r, echo=FALSE}
+summarayDataFgwcGsa()
+```
+
+Hasil penggerombolan:
+```{r, echo=FALSE}
+  hasilClusterFGwcGsa()
+```
+
+Nilai indeks validitas:
+```{r, echo=FALSE}
+  indeksValiditasFgwcGsa()
+```
+
+Visualisasi hasil penggerombolan:
+```{r, echo=FALSE}
+mapPlotFgwcGsa()
+clustPlotFgwcGsa()
+radarPlotFgwcGsa()
+biPlotFgwcGsa()
+scatterPlotFgwcGsa()
+```

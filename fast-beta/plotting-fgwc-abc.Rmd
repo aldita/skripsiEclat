@@ -1,0 +1,13 @@
+---
+title: "PLOTTING MAP"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  word_document
+  html_document
+  pdf_document
+---
+Evaluasi hasil fuzzy clustering dengan algoritma `r namaMethod()`
+
+```{r, echo = FALSE}
+saveIndex()
+```

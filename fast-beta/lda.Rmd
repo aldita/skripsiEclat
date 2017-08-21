@@ -1,0 +1,5 @@
+# Linear Discriminant Analysis
+  
+```{r, echo=FALSE}
+ FldaFunction()
+```

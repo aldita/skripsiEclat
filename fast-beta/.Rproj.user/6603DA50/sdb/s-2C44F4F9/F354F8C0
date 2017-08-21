@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1502039264666.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F354F8C0",
+    "lastKnownWriteTime" : 3346849036566623844,
+    "last_content_update" : 1502039264666,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "58F60686",
+        "caption" : "dataStudiKasus",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dataStudiKasus&cache_key=58F60686",
+        "displayedObservations" : "98702",
+        "environment" : "",
+        "object" : "dataStudiKasus",
+        "preview" : "0",
+        "totalObservations" : "98702",
+        "variables" : "11"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

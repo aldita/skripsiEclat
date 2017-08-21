@@ -1,0 +1,14 @@
+---
+title: "Plot"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  word_document
+  html_document
+  pdf_document
+---
+
+
+```{r, echo=FALSE}
+saveMap()
+```
+

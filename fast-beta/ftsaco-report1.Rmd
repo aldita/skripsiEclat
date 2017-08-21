@@ -1,0 +1,67 @@
+---
+title: "Forecasting Report"
+author: "Elan Lubihana"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+<h3><center><b> This Is Forecasting with Fuzzy Time Series And Ant Colony Optimization on FAST </b></center></h3>
+
+
+```{r, echo=FALSE, results='asis'}
+ knitr::kable(DRFACOinfodataShareToForum())
+```
+
+
+```{r, echo=FALSE, results='asis'}
+ knitr::kable(DRFACOinfoErrorShareToForum())
+```
+
+<center>
+```{r plot, echo=FALSE}
+library(dygraphs)
+    fno <- seq(0, (length(FTSACOgetDataFitting()[[4]]) + 1), 1)
+    fdata1 <- c(NA, FTSACOgetDataFitting()[[4]], NA)
+    fdata2 <- c(NA, FTSACOgetDataFitting()[[5]], NA)
+    fdata <- data.frame(fno, fdata1, fdata2)
+    colnames(fdata) <- c("no","true value","forecast")
+    fvarPlot <- dygraph(fdata, main = "Fitting Plot") %>%
+      dyLegend(width = 550) %>%
+      dyAxis("x", label = "Obsevation") %>%
+      dyAxis("y", label = "Value") %>%
+      dySeries(strokeWidth = 2, strokePattern = "dashed") %>%
+      dySeries(strokeWidth = 2) %>%
+      dyOptions(colors = c("blue", "red"), drawGrid = FALSE) %>%
+      dyRangeSelector(height = 30) 
+    fvarPlot
+br()
+br()
+  if(valuesFTSACO$FTSACOForecastBtn == 1){
+    #get mse model
+    fcindexmin <- FTSACOgetindexminmse(FTSACOgetDataPred()[[5]])
+    fcrmse <- sqrt(FTSACOgetDataPred()[[5]][fcindexmin])
+    fcn <- length(valuesFTSACO$dataForecast[[1]][-(1:2)])
+    fcse <- fcrmse / sqrt(fcn)
+    fce <- qt(.975, df = fcn-1) * fcse
+    fcno <- seq(0, (length(valuesFTSACO$dataForecast[[1]][-(1:2)]) + FTSACOgetJumlahDataTerpilih() + 1), 1)
+    fcdataprediksi <- as.matrix(valuesFTSACO$dataForecast[[1]][-(1:2)], ncol=1)
+    fcdata0 <- c(rep(NA, FTSACOgetJumlahDataTerpilih()+1), apply(fcdataprediksi, 1, function(x) (x-fce)), NA)
+    fcdata1 <- c(rep(NA, FTSACOgetJumlahDataTerpilih()+1), fcdataprediksi, NA)
+    fcdata2 <- c(rep(NA, FTSACOgetJumlahDataTerpilih()+1), apply(fcdataprediksi, 1, function(x) (x+fce)), NA)
+    fcdatatrue <- c(NA, FTSACOgetVar()[FTSACOgetFirstNumData():FTSACOgetLastNumData()], rep(NA, (length(fcdataprediksi) + 1)))
+    fcdata <- data.frame(fcno, fcdata0, fcdata1, fcdata2, fcdatatrue)
+    colnames(fcdata) <- c("no","data0", "Forecasting_Value", "data2", "datatrue")
+    fcvarPlot <- dygraph(fcdata, main = "Forecasting Plot") %>%
+      dyLegend(width = 550) %>%
+      dyAxis("x", label = "Observation") %>%
+      dyAxis("y", label = "Value") %>%
+      dySeries("datatrue", strokeWidth = 2) %>%
+      dySeries(c("data0", "Forecasting_Value", "data2"), strokeWidth = 2) %>%
+      dyOptions(colors = c("blue", "grey"), drawGrid = FALSE) %>%
+      dyRangeSelector(height = 30)
+    
+    fcvarPlot
+  }
+```
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
